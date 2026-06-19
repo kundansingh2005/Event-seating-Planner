@@ -1,0 +1,89 @@
+.floor-plan {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #0c0c14;
+}
+
+.floor-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #1e1e2a;
+  background: #0f0f18;
+}
+
+.floor-event-badge {
+  font-size: 12px;
+  font-weight: 600;
+  color: #e74c8b;
+  background: #e74c8b15;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid #e74c8b30;
+}
+
+.floor-hint {
+  font-size: 12px;
+  color: #5a5a6a;
+}
+
+.floor-canvas {
+  flex: 1;
+  position: relative;
+  overflow: auto;
+  min-height: 500px;
+}
+
+.floor-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, #2a2a3a 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.floor-empty {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #4a4a5a;
+  pointer-events: none;
+}
+
+.floor-empty-icon {
+  font-size: 48px;
+  opacity: 0.4;
+}
+
+.floor-empty p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.floor-empty strong {
+  color: #e74c8b;
+}
+
+.floor-stage {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 28px;
+  background: linear-gradient(135deg, #1a1a2e, #1e1e38);
+  border: 1px solid #3a3a58;
+  border-radius: 40px;
+  font-size: 13px;
+  color: #8888a8;
+  pointer-events: none;
+  white-space: nowrap;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.4);
+}

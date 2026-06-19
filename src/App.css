@@ -1,0 +1,84 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --pink: #e74c8b;
+  --bg-deep: #0c0c14;
+  --bg-mid: #0f0f18;
+  --bg-surface: #13131e;
+  --bg-raised: #1a1a26;
+  --border: #1e1e2a;
+  --border-light: #2a2a3a;
+  --text-primary: #f0f0fa;
+  --text-secondary: #8888a0;
+  --text-muted: #5a5a72;
+  --green: #10b981;
+  --amber: #f59e0b;
+  --red: #ef4444;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-body {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Drag overlay */
+.drag-overlay-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  background: #1a1a2e;
+  border: 1px solid #e74c8b60;
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(231, 76, 139, 0.25);
+  pointer-events: none;
+  white-space: nowrap;
+  backdrop-filter: blur(8px);
+}
+
+.drag-overlay-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.drag-overlay-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #f0f0fa;
+}
+
+/* Scrollbar global */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #2a2a3a; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: #3a3a52; }
+
+/* Selection */
+::selection { background: #e74c8b30; color: #fff; }

@@ -1,0 +1,119 @@
+.guest-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  background: #13131e;
+  border: 1px solid #22222e;
+  position: relative;
+  transition: all 0.15s;
+  touch-action: none;
+}
+
+.guest-card.unseated {
+  cursor: grab;
+}
+
+.guest-card.unseated:hover {
+  border-color: #e74c8b40;
+  background: #1a1a26;
+}
+
+.guest-card.seated {
+  opacity: 0.75;
+  cursor: default;
+}
+
+.guest-card.dragging {
+  cursor: grabbing;
+  box-shadow: 0 8px 24px rgba(231, 76, 139, 0.3);
+  z-index: 999;
+}
+
+.guest-card.highlighted {
+  border-color: #f59e0b60;
+  background: #f59e0b08;
+}
+
+.guest-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.guest-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.guest-name {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #e0e0f0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.guest-meta {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.guest-group {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.guest-seat {
+  font-size: 11px;
+  color: #5a5a7a;
+}
+
+.guest-status.seated-badge {
+  font-size: 12px;
+  color: #10b981;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.guest-drag-handle {
+  font-size: 16px;
+  color: #4a4a62;
+  cursor: grab;
+  flex-shrink: 0;
+  letter-spacing: -2px;
+}
+
+.guest-remove {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ef4444;
+  border: none;
+  color: #fff;
+  font-size: 11px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+}
+
+.guest-card:hover .guest-remove {
+  display: flex;
+}

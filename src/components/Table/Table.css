@@ -1,0 +1,108 @@
+.table-container {
+  position: absolute;
+  cursor: grab;
+  user-select: none;
+}
+
+.table-container.dragging {
+  cursor: grabbing;
+  z-index: 50;
+  filter: drop-shadow(0 8px 24px rgba(231, 76, 139, 0.3));
+}
+
+.table-surface {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.2s;
+}
+
+.table-surface.round {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1e1e2e, #252535);
+  border: 2px solid #3a3a52;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+.table-surface.rectangle {
+  width: 140px;
+  height: 50px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1e1e2e, #252535);
+  border: 2px solid #3a3a52;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+.table-container.full .table-surface {
+  border-color: #e74c8b60;
+}
+
+.table-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  z-index: 5;
+}
+
+.table-name {
+  font-size: 10px;
+  font-weight: 600;
+  color: #c0c0d0;
+  text-align: center;
+  max-width: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.table-count {
+  font-size: 11px;
+  color: #6b6b7a;
+  font-family: 'Playfair Display', serif;
+}
+
+.table-count.full {
+  color: #e74c8b;
+}
+
+.seats-container {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.seat-wrapper {
+  position: absolute;
+  pointer-events: all;
+}
+
+.table-remove-btn {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ef4444;
+  border: 2px solid #0f0f13;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 60;
+  line-height: 1;
+  padding: 0;
+}
+
+.table-container:hover .table-remove-btn {
+  display: flex;
+}
